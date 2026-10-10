@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+const cvUrl = `${import.meta.env.BASE_URL}Robert_Ramos_CV.pdf`
+
 const facts = [
   { value: '~8 yrs', label: 'building production software' },
   { value: '20–25%', label: 'faster financial microservices' },
@@ -312,7 +314,7 @@ function App() {
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#experience">View experience <ArrowIcon /></a>
-              <a className="button button-secondary" href="/Robert_Ramos_CV.pdf" download>Download CV</a>
+              <a className="button button-secondary" href={cvUrl} download>Download CV</a>
             </div>
             <dl className="hero-facts">
               {facts.map((fact) => (
@@ -468,7 +470,7 @@ function App() {
             <div className="contact-links">
               <a href="mailto:roberamos1525@gmail.com">roberamos1525@gmail.com <ArrowIcon /></a>
               <a href="https://www.linkedin.com/in/robert-ramos-6507973b5" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
-              <a href="/Robert_Ramos_CV.pdf" download>Download CV <ArrowIcon /></a>
+              <a href={cvUrl} download>Download CV <ArrowIcon /></a>
             </div>
           </div>
         </section>
